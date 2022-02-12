@@ -8,27 +8,26 @@ int input()
   return n;
 }
 
-// Using Euclidean algorithm
 int gcd(int a, int b)
 {
-    int large,small,i,rem;
-    large = a > b ? a : b;
-    small = a < b ? a : b;
-    i = 1;
-    rem = 1;
+  int large,small,i,rem;
+  large = a > b ? a : b;
+  small = a < b ? a : b;
+  i = 1;
+  rem = 1;
 
-    while (rem)
+  while (rem)
+  {
+    rem = large - i * small;
+    if (rem < small)
     {
-        rem = large - i * small;
-        if (rem < small)
-        {
-            large = small;
-            small = rem;
-            i = 0;
-        }
-        i++;
+     large = small;
+     small = rem;
+     i = 0;
     }
-    return large;
+    i++;
+  }
+  return large;
 }
 
 void output(int a, int b, int gcd)
