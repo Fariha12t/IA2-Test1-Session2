@@ -2,10 +2,10 @@
 
 int input_number()
 {
-  int n;
+  int num;
   printf("Enter the number:\n");
-  scanf("%d", &n);
-  return n;
+  scanf("%d", &num);
+  return num;
 }
 
 int is_composite(int n)
@@ -28,9 +28,8 @@ void output(int n, int isComposite)
 
 int main()
 {
-  int n ,iscomposite;
-  n = input_number();
-  iscomposite= is_composite(n);
-  output(n, iscomposite);
+  int num = input_number();
+  int res = is_composite(num);
+  output(num, res);
   return 0;
 }
