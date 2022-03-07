@@ -7,8 +7,19 @@ int input()
   scanf("%d", &n);
   return n;
 }
+int gcd(int a,int b)
+  {
+    int t;
+    while (b!=0)
+     {
+       t=b;
+       b=a%b;
+       a=t;
+     }
+  return a;
+  }
 
-int gcd(int a, int b)
+/*int gcd(int a, int b)
 {
   int large,small,i,rem;
   large = a > b ? a : b;
@@ -29,7 +40,7 @@ int gcd(int a, int b)
   }
   return large;
 }
-
+*/
 void output(int a, int b, int gcd)
 {
   printf("The gcd of %d and %d is %d\n", a, b, gcd);
