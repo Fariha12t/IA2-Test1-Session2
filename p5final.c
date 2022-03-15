@@ -51,7 +51,7 @@ int main()
   int n1,n2;
   n1 = input();
   n2 = input();
-  int res = gcd(n1, n2);
-  output(n1, n2, res);
+  int result=gcd(n1,n2);
+  output(n1, n2, result);
   return 0;
 }

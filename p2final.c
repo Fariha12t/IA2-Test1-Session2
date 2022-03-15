@@ -31,7 +31,7 @@ int main()
   a = input_side();
   b = input_side();
   c = input_side();
-  isScalene= check_scalene(a,b,c);
+  isScalene=check_scalene(a,b,c);
   output(a,b,c, isScalene);
   return 0;
 }

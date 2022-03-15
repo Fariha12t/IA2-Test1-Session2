@@ -7,29 +7,32 @@ void input_string(char *a)
 }
 int string_length(char *str)
 {
-  int n;
-  for (n = 0; str[n]; n++);
-  return n;
+  int len=0;
+  while(str[len]!='\0')
+    len++;
+  return 0;
 }
-
+/*
 void string_copy(char *d, char *s)
 {
   for(int i=0;s[i]!='\0';i++)
     d[i]=s[i];
-}
+}*/
 
-char *str_reverse(char *str)
+char str_reverse(char *str)
 {
-  int n,t;
-  n = string_length(str);
-  n--;
-  for (int i = 0; i< n/2; i++)
+  int len,temp;
+  
+  len = string_length(str);
+  
+  for (int i = 0; i< (len-1)/2; i++)
   {
-     t= str[i];
-     str[i] = str[n-i];
-     str[n-i] = t;
-  }
-  return str;
+     temp= str[i];
+     str[i] = str[temp-1-i];
+     str[temp-1-i] = temp;
+    }
+  
+  return temp;
 }
 
 void output(char *a, char *reverse_a)
@@ -39,12 +42,12 @@ void output(char *a, char *reverse_a)
 
 int main()
 {
-  char str[100];
+  char str[100],x[100];
   input_string(str);
-  char rev_str[100];
-  string_copy(rev_str,str);
-  str_reverse(rev_str);
-  output(str, rev_str);
+  
+  
+  str_reverse(x);
+  output(str,x);
   return 0;
 }
 
