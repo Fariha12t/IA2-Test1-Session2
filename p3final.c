@@ -28,8 +28,9 @@ void output(int n, int isComposite)
 
 int main()
 {
-  int num = input_number();
-  int res = is_composite(num);
-  output(num, res);
+  int n,x;
+  n= input_number();
+  x = is_composite(n);
+  output(n, x);
   return 0;
 }

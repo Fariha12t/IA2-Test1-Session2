@@ -28,6 +28,8 @@ int main()
 {
   char a[20];
   input_string(a);
+  
+  
   str_reverse(a);
   output(a);
   return 0;
