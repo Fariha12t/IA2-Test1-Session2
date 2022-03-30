@@ -7,31 +7,25 @@ void input_string(char *a)
 } 
 char str_reverse(char *a)
 {
-  char temp;
-  int i=0,j=0;
-  j=strlen(a)-1;
-  while(i<j)
-    {
-      temp=a[i];
-      a[i]=a[j];
-      a[j]=temp;
-      i++;
-      j--;
-    }
+ int i,m=0;
+  for(i=0;a[i]!='\0';i++)
+    m++;
+  return m;
 }
-void output(char *a)
+void output(char *a, char reverse_a)
 {
-  printf("the reverse string is %s",a);
+  printf("the reverse string is \n");
+  for( int i=reverse_a-1;a[i]!='\0';i--)
+   printf("%c",a[i]);
   
 }
 int main()
 {
   char a[20];
+  int b;
   input_string(a);
-  
-  
-  str_reverse(a);
-  output(a);
+  b=str_reverse(a);
+  output(a,b);
   return 0;
   
 }
