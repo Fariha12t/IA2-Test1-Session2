@@ -11,14 +11,14 @@ int is_composite(int n)
   int i, count =0;
   for(i=1; i<=n; i++)
    {
-    if(n % i == 0)
+    if(n%i==0)
     count++;
    }
   return count;  
 }
 void output(int n,int composite)
 {
-  int result;
+ 
   if(composite > 2)
     printf("The number %d is composite",n);
   else

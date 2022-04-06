@@ -1,57 +1,32 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int input()
 {
-  int n;
-  printf("Enter a number:\n");
-  scanf("%d", &n);
-  return n;
+  int a;
+  printf("enter any number:\n");
+  scanf("%d",&a);
+  return a;
 }
 int gcd(int a,int b)
-  {
-    int t;
-    while (b!=0)
-     {
-       t=b;
-       b=a%b;
-       a=t;
-     }
-  return a;
-  }
-
-/*int gcd(int a, int b)
 {
-  int large,small,i,rem;
-  large = a > b ? a : b;
-  small = a < b ? a : b;
-  i = 1;
-  rem = 1;
-
-  while (rem)
+  int hcf;
+  for(int i=2;i<a && i<b;i++)
   {
-    rem = large - i * small;
-    if (rem < small)
+    if(a%i==0 && b%i==0)
     {
-     large = small;
-     small = rem;
-     i = 0;
+      hcf=i;
     }
-    i++;
   }
-  return large;
+  return hcf;
 }
-*/
-void output(int a, int b, int gcd)
+void output(int a,int b,int gcd)
 {
-  printf("The gcd of %d and %d is %d\n", a, b, gcd);
+  printf("gcd of %d and %d is %d",a,b,gcd);
 }
-
 int main()
-{ 
-  int n1,n2;
-  n1 = input();
-  n2 = input();
-  int result=gcd(n1,n2);
-  output(n1, n2, result);
-  return 0;
+{
+  int a,b,hcf;
+  a=input();
+  b=input();
+  hcf=gcd(a,b);
+  output(a,b,hcf);
 }
