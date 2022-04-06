@@ -8,15 +8,16 @@ int input_side()
 }
 int check_scalene(int a, int b, int c)
 {
+  int isScalene;
   if (a != b && a != c && b != c)
   {
-    return 1;
+    isScalene=0;
   }
-  return 0;
+  return isScalene;
 }
 void output(int a, int b, int c, int isScalene)
 {
-  if(isScalene==1)
+  if(isScalene==0)
   {
     printf("The triangle with sides %d, %d and %d is scalene\n", a, b, c);
   }

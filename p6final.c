@@ -14,7 +14,7 @@ char str_reverse(char *a)
 }
 void output(char *a, char reverse_a)
 {
-  printf("the reverse string is \n");
+  printf("the reverse of %s is \n",a);
   for( int i=reverse_a-1;a[i]!='\0';i--)
    printf("%c",a[i]);
   
